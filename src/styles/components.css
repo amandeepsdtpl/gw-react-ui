@@ -1,0 +1,123 @@
+/* Component Styles */
+@import './theme.css';
+
+/* Button */
+.gw-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--gw-spacing-2) var(--gw-spacing-4);
+  border-radius: var(--gw-border-radius);
+  font-family: var(--gw-font-family);
+  font-size: var(--gw-font-size-base);
+  font-weight: 500;
+  line-height: 1;
+  transition: var(--gw-transition);
+  cursor: pointer;
+}
+
+.gw-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.gw-btn--primary {
+  background-color: var(--gw-primary);
+  color: white;
+}
+
+.gw-btn--primary:hover:not(:disabled) {
+  background-color: var(--gw-primary-hover);
+}
+
+.gw-btn--secondary {
+  background-color: var(--gw-secondary);
+  color: white;
+}
+
+.gw-btn--outline {
+  border: 1px solid var(--gw-border-color);
+  background-color: transparent;
+  color: var(--gw-text-primary);
+}
+
+/* Input */
+.gw-input {
+  width: 100%;
+  padding: var(--gw-spacing-2);
+  border: 1px solid var(--gw-border-color);
+  border-radius: var(--gw-border-radius);
+  background-color: var(--gw-background);
+  color: var(--gw-text-primary);
+  font-family: var(--gw-font-family);
+  font-size: var(--gw-font-size-base);
+  transition: var(--gw-transition);
+}
+
+.gw-input:focus {
+  outline: none;
+  border-color: var(--gw-primary);
+  box-shadow: 0 0 0 1px var(--gw-primary);
+}
+
+.gw-input--error {
+  border-color: var(--gw-error);
+}
+
+/* Card */
+.gw-card {
+  background-color: var(--gw-background);
+  border-radius: var(--gw-border-radius);
+  overflow: hidden;
+}
+
+.gw-card--elevated {
+  box-shadow: var(--gw-shadow-md);
+}
+
+.gw-card__header {
+  padding: var(--gw-spacing-4);
+  border-bottom: 1px solid var(--gw-border-color);
+}
+
+.gw-card__content {
+  padding: var(--gw-spacing-4);
+}
+
+/* Dialog */
+.gw-dialog-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: var(--gw-z-modal);
+}
+
+.gw-dialog {
+  background-color: var(--gw-background);
+  border-radius: var(--gw-border-radius);
+  box-shadow: var(--gw-shadow-lg);
+  width: 90%;
+  max-width: 500px;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+/* Toast */
+.gw-toast {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  padding: var(--gw-spacing-3) var(--gw-spacing-4);
+  border-radius: var(--gw-border-radius);
+  box-shadow: var(--gw-shadow-md);
+  z-index: var(--gw-z-tooltip);
+  animation: gw-slide-in var(--gw-transition-duration) var(--gw-transition-timing);
+}
+
+/* Add more component styles as needed */

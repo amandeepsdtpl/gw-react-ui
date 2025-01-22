@@ -1,0 +1,73 @@
+/* Core Styles */
+@import './theme.css';
+
+/* Reset */
+.gw-reset {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* Typography */
+.gw-text {
+  font-family: var(--gw-font-family);
+  color: var(--gw-text-primary);
+  line-height: 1.5;
+}
+
+.gw-text-sm { font-size: var(--gw-font-size-sm); }
+.gw-text-base { font-size: var(--gw-font-size-base); }
+.gw-text-lg { font-size: var(--gw-font-size-lg); }
+.gw-text-xl { font-size: var(--gw-font-size-xl); }
+
+/* Animations */
+@keyframes gw-fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes gw-slide-in {
+  from { transform: translateY(-10px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes gw-spin {
+  to { transform: rotate(360deg); }
+}
+
+.gw-animate-fade-in {
+  animation: gw-fade-in var(--gw-transition-duration) var(--gw-transition-timing);
+}
+
+.gw-animate-slide-in {
+  animation: gw-slide-in var(--gw-transition-duration) var(--gw-transition-timing);
+}
+
+.gw-animate-spin {
+  animation: gw-spin 1s linear infinite;
+}
+
+/* Utilities */
+.gw-flex { display: flex; }
+.gw-items-center { align-items: center; }
+.gw-justify-center { justify-content: center; }
+.gw-gap-1 { gap: var(--gw-spacing-1); }
+.gw-gap-2 { gap: var(--gw-spacing-2); }
+.gw-gap-3 { gap: var(--gw-spacing-3); }
+.gw-gap-4 { gap: var(--gw-spacing-4); }
+
+/* Responsive */
+@media (min-width: 640px) {
+  .gw-sm\:flex { display: flex; }
+}
+
+@media (min-width: 768px) {
+  .gw-md\:flex { display: flex; }
+}
+
+@media (min-width: 1024px) {
+  .gw-lg\:flex { display: flex; }
+}
