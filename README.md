@@ -1,4 +1,4 @@
-# @gw/ui
+# ReactUI package @gw/ui
 
 A comprehensive React UI component library with TypeScript support and Tailwind CSS styling.
 
